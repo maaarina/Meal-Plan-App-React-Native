@@ -1,10 +1,35 @@
-import { View, Text } from 'react-native';
+import React from 'react';
+import { View, Text, ScrollView } from 'react-native';
+import { styles } from './style';
+import Header from '../src/components/header/';
+import MealCards from '../src/components/mealCards/';
 
-export default function HomeScreen() {
+export default function Index() {
+    const items = [
+    { id: 1, weekday: 'Segunda' },
+    { id: 2, weekday: 'Terça' },
+    { id: 3, weekday: 'Quarta' },
+    { id: 4, weekday: 'Quinta' },
+    { id: 5, weekday: 'Sexta' },
+    { id: 6, weekday: 'Sábado' },
+    { id: 7, weekday: 'Domingo' },
+  ];
+
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>teste</Text>
-      <Text>Meal Plan</Text>
+     <View>
+      <Header titulo="Meal Plan" />
+      <ScrollView>
+        <View style={styles.container}>
+          {items.map((item) => (
+            <View key={item.id}>
+              <Text style={styles.dayTitle}> {item.weekday} </Text>
+              <MealCards mealType="Café da Manhã" />
+              <MealCards mealType="Almoço" />
+              <MealCards mealType="Jantar" />
+            </View>
+          ))}
+        </View>
+      </ScrollView>
     </View>
   );
 }
