@@ -9,7 +9,7 @@ export default function Layout() {
       />
       <Tabs.Screen
         name="shoppingList"
-        options={{ title: 'Shopping List' }} //nome no tab
+        options={{ title: 'Shopping List ' }} //nome no tab
       />
     </Tabs>
   );
