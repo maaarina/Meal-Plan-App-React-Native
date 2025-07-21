@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView, } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from './style';
 import Header from '../src/components/header/';
 import MealCards from '../src/components/mealCards/';
@@ -16,9 +17,9 @@ export default function Index() {
   ];
 
   return (
-     <View>
-      <Header titulo="Meal Plan" />
-      <ScrollView>
+     <SafeAreaView style={{ flex: 1 }} >
+      <ScrollView >
+        <Header titulo="Meal Plan" />
         <View style={styles.container}>
           {items.map((item) => (
             <View key={item.id}>
@@ -30,6 +31,6 @@ export default function Index() {
           ))}
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
