@@ -42,3 +42,7 @@ npm install
 
 ### Inicie o app
 npm start
+O Expo abrirá no navegador com um QR Code para rodar no seu celular usando o app Expo Go.
+
+📧 Contato: marina.gabri3lly@hotmail.com
+🔗 LinkedIn | https://www.linkedin.com/in/marinagabri3lly
