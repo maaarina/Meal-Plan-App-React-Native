@@ -41,7 +41,7 @@ cd Meal-Plan-App-React-Native
 npm install
 
 ### Inicie o app
-npm start
+npx expo start
 O Expo abrirá no navegador com um QR Code para rodar no seu celular usando o app Expo Go.
 
 📧 Contato: marina.gabri3lly@hotmail.com
